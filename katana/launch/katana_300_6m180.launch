@@ -14,7 +14,7 @@
     <param name="use_serial" type="bool" value="true" />
 
     <!-- for /dev/ttyS0: -->
-    <param name="serial_port" type="int" value="0" />
+    <param name="serial_port" type="int" value="3" />
 
     <param name="config_file_path" type="string" value="$(find kni)/KNI_4.3.0/configfiles300/katana6M180.cfg" />
 
