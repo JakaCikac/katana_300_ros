@@ -27,6 +27,7 @@ cd katana_300_ros
 rosmake katana
 rosmake katana_tutorials
 </code></pre>
+
 5. Setup connection
 
 If you are using a USB to serial converter:
