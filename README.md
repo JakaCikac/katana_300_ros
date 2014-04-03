@@ -16,6 +16,7 @@ cd src
 <pre><code>
 git clone https://github.com/JakaCikac/katana_300_ros
 </code></pre>
+
 3. Install some dependencies
 <pre><code>
 sudo apt-get install ros-hydro-control-msgs  ros-hydro-pr2-controllers libarmadillo-dev ros-hydro-convex-decomposition ros-hydro-moveit-msgs
