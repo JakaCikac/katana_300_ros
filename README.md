@@ -21,7 +21,6 @@ git clone https://github.com/JakaCikac/katana_300_ros
 sudo apt-get install ros-hydro-control-msgs  ros-hydro-pr2-controllers libarmadillo-dev ros-hydro-convex-decomposition ros-hydro-moveit-msgs
 </code></pre>
 
-
 4. Make the packages
 <pre><code>
 cd katana_300_ros
@@ -38,6 +37,7 @@ sudo ln -sf /dev/ttyUSB0 /dev/ttyS3
 Otherwise the port number ( dev/ttys# ) can be set in the file:
 /katana/launch/katana_300_6m180.launch
 </code></pre>
+
 6. Set the environment variables
 Put the following in your .bashrc..
 <pre><code>
@@ -54,16 +54,19 @@ Save and close gedit.
 <pre><code>
 source .bashrc
 </code></pre>
+
 7. Launch the katana and start calibration
 Open new terminal window and
 <pre><code>
 roslaunch katana katana.launch
 </code></pre>
+
 8. Start the trajectory server and client
 Open new terminal window and
 <pre><code>
 roslaunch katana_tutorials follow_joint_trajectory_client.launch
 </code></pre>
+
 9. Send the start trajectory command 
 Before running the following command make sure you are near the emergency stop button (or shutdown) and push it in case the Katana is headed for a collision.
 
