@@ -1,5 +1,8 @@
 Installing and testing the katana 300
 =============
+* Info
+Following is a procedure for a simple test of two trajectories with the Katana 300.
+Should there be any issues, please contact me.
 
 * Create a catkin workspace
 
@@ -78,6 +81,8 @@ Open new terminal window and
 rostopic pub /katana/start_trajectory std_msgs/Bool 1
 </code></pre>
 This should start the first trajectory with the Katana.
+After it is done:
+Ctrl + c or close the terminal window.
 
 * Return the Katana to the initial position
 Open new terminal window and
