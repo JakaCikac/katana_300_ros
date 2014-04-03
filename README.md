@@ -1,6 +1,7 @@
 Installing and testing the katana 300
 =============
-1. Create a catkin workspace
+
+* Create a catkin workspace
 
 <pre><code>
 mkdir -p $HOME/ROS_katana/src
@@ -12,24 +13,24 @@ source devel/setup.bash
 cd src
 </code></pre>
 
-2. Clone the repository
+* Clone the repository
 <pre><code>
 git clone https://github.com/JakaCikac/katana_300_ros
 </code></pre>
 
-3. Install some dependencies
+* Install some dependencies
 <pre><code>
 sudo apt-get install ros-hydro-control-msgs  ros-hydro-pr2-controllers libarmadillo-dev ros-hydro-convex-decomposition ros-hydro-moveit-msgs
 </code></pre>
 
-4. Make the packages
+* Make the packages
 <pre><code>
 cd katana_300_ros
 rosmake katana
 rosmake katana_tutorials
 </code></pre>
 
-5. Setup connection
+* Setup connection
 
 If you are using a USB to serial converter:
 <pre><code>
@@ -40,7 +41,7 @@ Otherwise the port number ( dev/ttys# ) can be set in the file:
 /katana/launch/katana_300_6m180.launch
 </code></pre>
 
-6. Set the environment variables
+* Set the environment variables
 Put the following in your .bashrc..
 <pre><code>
 cd
@@ -57,19 +58,19 @@ Save and close gedit.
 source .bashrc
 </code></pre>
 
-7. Launch the katana and start calibration
+* Launch the katana and start calibration
 Open new terminal window and
 <pre><code>
 roslaunch katana katana.launch
 </code></pre>
 
-8. Start the trajectory server and client
+* Start the trajectory server and client
 Open new terminal window and
 <pre><code>
 roslaunch katana_tutorials follow_joint_trajectory_client.launch
 </code></pre>
 
-9. Send the start trajectory command 
+* Send the start trajectory command 
 Before running the following command make sure you are near the emergency stop button (or shutdown) and push it in case the Katana is headed for a collision.
 
 Open new terminal window and
@@ -78,7 +79,7 @@ rostopic pub /katana/start_trajectory std_msgs/Bool 1
 </code></pre>
 This should start the first trajectory with the Katana.
 
-10. Return the Katana to the initial position
+* Return the Katana to the initial position
 Open new terminal window and
 <pre><code>
 rostopic pub /katana/start_trajectory2 std_msgs/Bool 1
