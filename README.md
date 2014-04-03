@@ -3,6 +3,7 @@ Installing and testing the katana 300
 * Info
 Following is a procedure for a simple test of two trajectories with the Katana 300.
 Should there be any issues, please contact me.
+(My email address is on my Git profile page.)
 
 * Create a catkin workspace
 
