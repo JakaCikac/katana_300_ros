@@ -1,12 +1,13 @@
 Installing and testing the katana 300
 =============
-* Info
+
+Info
 -------------
 Following is a procedure for a simple test of two trajectories with the Katana 300.
 Should there be any issues, please contact me.
 (My email address is on my Git profile page.)
 
-* Create a catkin workspace
+Create a catkin workspace
 -------------
 <pre><code>
 mkdir -p $HOME/ROS_katana/src
@@ -18,19 +19,19 @@ source devel/setup.bash
 cd src
 </code></pre>
 
-* Clone the repository
+Clone the repository
 -------------
 <pre><code>
 git clone https://github.com/JakaCikac/katana_300_ros
 </code></pre>
 
-* Install some dependencies
+Install some dependencies
 -------------
 <pre><code>
 sudo apt-get install ros-hydro-control-msgs  ros-hydro-pr2-controllers libarmadillo-dev ros-hydro-convex-decomposition ros-hydro-moveit-msgs
 </code></pre>
 
-* Make the packages
+Make the packages
 -------------
 <pre><code>
 cd katana_300_ros
@@ -38,7 +39,7 @@ rosmake katana
 rosmake katana_tutorials
 </code></pre>
 
-* Setup connection
+Setup connection
 -------------
 If you are using a USB to serial converter:
 <pre><code>
@@ -49,7 +50,7 @@ Otherwise the port number ( dev/ttys# ) can be set in the file:
 /katana/launch/katana_300_6m180.launch
 </code></pre>
 
-* Set the environment variables
+Set the environment variables
 -------------
 Put the following in your .bashrc..
 <pre><code>
@@ -67,21 +68,21 @@ Save and close gedit.
 source .bashrc
 </code></pre>
 
-* Launch the katana and start calibration
+Launch the katana and start calibration
 -------------
 Open new terminal window and
 <pre><code>
 roslaunch katana katana.launch
 </code></pre>
 
-* Start the trajectory server and client
+Start the trajectory server and client
 -------------
 Open new terminal window and
 <pre><code>
 roslaunch katana_tutorials follow_joint_trajectory_client.launch
 </code></pre>
 
-* Send the start trajectory command 
+Send the start trajectory command 
 -------------
 Before running the following command make sure you are near the emergency stop button (or shutdown) and push it in case the Katana is headed for a collision.
 
@@ -93,7 +94,7 @@ This should start the first trajectory with the Katana.
 After it is done:
 Ctrl + c or close the terminal window.
 
-* Return the Katana to the initial position
+Return the Katana to the initial position
 -------------
 Open new terminal window and
 <pre><code>
