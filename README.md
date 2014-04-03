@@ -21,9 +21,9 @@ cd src
 
 Clone the repository
 -------------
-<pre><code>
+<code>
 git clone https://github.com/JakaCikac/katana_300_ros
-</code></pre>
+</code>
 
 Install some dependencies
 -------------
