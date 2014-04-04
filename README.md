@@ -7,6 +7,14 @@ Following is a procedure for a simple test of two trajectories with the Katana 3
 Should there be any issues, please contact me.
 (My email address is on my Git profile page.)
 
+ROS Distribution
+-------------
+Make sure you have groovy installed. If not 
+<code>sudo apt-get install ros-groovy-desktop-full</code>
+
+Make sure you are using groovy: 
+<code>echo $ROS_DISTRO</code>
+
 Create a catkin workspace
 -------------
 <pre><code>
@@ -22,7 +30,7 @@ cd src
 Clone the repository
 -------------
 <code>
-git clone https://github.com/JakaCikac/katana_300_ros
+git clone -b hydro_devel https://github.com/JakaCikac/katana_300_ros
 </code>
 
 Install some dependencies
@@ -31,6 +39,9 @@ Install some dependencies
 sudo apt-get install ros-hydro-control-msgs  ros-hydro-pr2-controllers libarmadillo-dev ros-hydro-convex-decomposition ros-hydro-moveit-msgs
 </code></pre>
 
+Warning: There could me more dependencies needed. If there is an error during make, it will tell you which dependency is missing, please install it using the 
+<code>sudo apt-get install ros-hydro-<dependency></code>
+	
 Make the packages
 -------------
 <pre><code>
