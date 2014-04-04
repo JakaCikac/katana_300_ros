@@ -9,10 +9,10 @@ Should there be any issues, please contact me.
 
 ROS Distribution
 -------------
-Make sure you have groovy installed. If not 
-<code>sudo apt-get install ros-groovy-desktop-full</code>
+Make sure you have hydro installed. If not 
+<code>sudo apt-get install ros-hydro-desktop-full</code>
 
-Make sure you are using groovy: 
+Make sure you are using hydro: 
 <code>echo $ROS_DISTRO</code>
 
 Create a catkin workspace
