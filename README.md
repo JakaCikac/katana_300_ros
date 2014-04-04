@@ -1,3 +1,16 @@
+
+
+mkdir -p $HOME/ROS_katana/src
+cd $HOME/ROS_katana/src
+catkin_init_workspace
+cd ..
+catkin_make
+source devel/setup.bash
+cd src
+git clone -b groovy https://github.com/JakaCikac/katana_300_ros
+
+sudo apt-get install ros-groovy-pr2-controllers ros-groovy-arm-navigation libarmadillo-dev
+
 Installing and testing the katana 300
 =============
 
@@ -6,6 +19,14 @@ Info
 Following is a procedure for a simple test of two trajectories with the Katana 300.
 Should there be any issues, please contact me.
 (My email address is on my Git profile page.)
+
+ROS Distribution
+-------------
+Make sure you have groovy installed. If not 
+<code>sudo apt-get install ros-groovy-desktop-full</code>
+
+Make sure you are using groovy: 
+<code>echo $ROS_DISTRO</code>
 
 Create a catkin workspace
 -------------
@@ -22,14 +43,17 @@ cd src
 Clone the repository
 -------------
 <code>
-git clone https://github.com/JakaCikac/katana_300_ros
+git clone -b groovy https://github.com/JakaCikac/katana_300_ros
 </code>
 
 Install some dependencies
 -------------
 <pre><code>
-sudo apt-get install ros-hydro-control-msgs  ros-hydro-pr2-controllers libarmadillo-dev ros-hydro-convex-decomposition ros-hydro-moveit-msgs
+sudo apt-get install ros-groovy-pr2-controllers ros-groovy-arm-navigation libarmadillo-dev
 </code></pre>
+
+Warning: There could me more dependencies needed. If there is an error during make, it will tell you which dependency is missing, please install it using the 
+<code>sudo apt-get install ros-groovy-<dependency></code>
 
 Make the packages
 -------------
@@ -60,7 +84,7 @@ gedit .bashrc
 At the end of the file copy: 
 <pre><code>
 export KATANA_TYPE="katana_300_6m180"
-source /opt/ros/hydro/setup.bash
+source /opt/ros/groovy/setup.bash
 source /home/ROS_katana/devel/setup.bash
 </code></pre>
 Save and close gedit. 
