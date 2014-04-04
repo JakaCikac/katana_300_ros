@@ -1,16 +1,3 @@
-
-
-mkdir -p $HOME/ROS_katana/src
-cd $HOME/ROS_katana/src
-catkin_init_workspace
-cd ..
-catkin_make
-source devel/setup.bash
-cd src
-git clone -b groovy https://github.com/JakaCikac/katana_300_ros
-
-sudo apt-get install ros-groovy-pr2-controllers ros-groovy-arm-navigation libarmadillo-dev
-
 Installing and testing the katana 300
 =============
 
